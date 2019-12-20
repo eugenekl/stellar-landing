@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 /* layout */
@@ -19,41 +19,51 @@ body {
 } */
 
 .container {
-  margin: 18px;
+  margin: 5px 18px;
   height: 100vh;
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: minmax(25px, auto);
-  background: linear-gradient(
-      rgba(30, 40, 134, 0.8),
+  grid-auto-rows: minmax(50 auto);
+  background-color: #aac6fc;
+  /* background: linear-gradient(
+      rgba(21, 28, 95, 0.8),
       rgba(86, 99, 216, 0.4),
       rgba(255, 255, 255, 0.95)
     ),
     url(/images/background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 60%;
+  background-position: 50% 60%; */
+}
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 601px) {
   .container {
     display: grid;
-    grid-template-columns: 45% 55%;
-    grid-template-rows: 50px 75px 350px auto;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 50px 55px 350px auto;
   }
 }
 
-/* component */
+/* block */
 .header {
   font-family: "Roboto Slab", serif;
-  color: rgb(230, 230, 230);
+  color: black;
+  font-weight: bold;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .headline {
-  padding: 0 2em;
+  padding: 1em 1em;
   text-align: center;
-  color: rgb(230, 230, 230);
+  color: black;
 }
 
 .subheading {
@@ -64,28 +74,23 @@ body {
 
 .benefits {
   width: 50%;
-  padding: 0 2.5em;
+  padding: 1.5em 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+.hero {
+  margin-top: 20px;
+  width: 100%;
+}
+
 .cta {
-  margin: auto;
-  color: rgb(230, 230, 230);
-  background-image: linear-gradient(
-    rgba(59, 74, 207, 0.9),
-    rgba(105, 86, 216, 0.9)
-  );
-  padding: 10px 90px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  font-weight: 400;
-  font-size: 1.25rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
 @media only screen and (min-width: 601px) {
@@ -99,7 +104,7 @@ body {
   }
 
   .headline {
-    padding: 0;
+    padding: 0 0 0 1em;
     text-align: left;
     font-size: 2rem;
   }
@@ -107,6 +112,9 @@ body {
   .hero {
     grid-column: 1 / 2;
     grid-row: 2 / 5;
+    padding: 50px 25px;
+    width: 100%;
+    margin: 0;
   }
 
   .subheading {
@@ -119,18 +127,46 @@ body {
     width: 100%;
     padding: 1em 0;
   }
+
+  .cta {
+    margin-top: 50px;
+  }
 }
 
 /* element */
+.header__logo {
+  height: 25px;
+  margin-right: 8px;
+}
+
 .benefits__icon {
   width: 50px;
   margin-top: 0.8em;
   margin-bottom: 0.5em;
 }
 
+.cta__button {
+  color: black;
+  background-color: #f6e049;
+  padding: 10px 90px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(95, 23, 23, 0.1);
+}
+
 @media only screen and (min-width: 601px) {
   .benefits__icon {
     width: 50px;
-    margin: 0 1.5em 0 0;
+    margin: 0 1.5em 0 1.5em;
+  }
+
+  .cta__copy {
+    font-size: 1.15rem;
   }
 }
