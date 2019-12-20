@@ -45,8 +45,8 @@ body {
 @media only screen and (min-width: 601px) {
   .container {
     display: grid;
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 50px 55px 350px auto;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50px 450px 75px;
   }
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .headline {
-  padding: 1em 1em;
+  padding: 1em 0.5em;
   text-align: center;
   color: black;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 .hero {
-  margin-top: 20px;
+  padding-top: 20px;
   width: 100%;
 }
 
@@ -90,7 +90,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
 }
 
 @media only screen and (min-width: 601px) {
@@ -103,22 +102,25 @@ body {
     font-size: 1.6rem;
   }
 
-  .headline {
-    padding: 0 0 0 1em;
-    text-align: left;
-    font-size: 2rem;
-  }
-
   .hero {
     grid-column: 1 / 2;
-    grid-row: 2 / 5;
-    padding: 50px 25px;
+    grid-row: 2 / 3;
+    padding: 25px 25px;
     width: 100%;
-    margin: 0;
+  }
+
+  .headline {
+    grid-column: 1 / 2;
+    padding: 0;
+    text-align: center;
+    font-size: 2.25rem;
   }
 
   .subheading {
-    display: block;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
   }
 
   .benefits {
@@ -129,7 +131,7 @@ body {
   }
 
   .cta {
-    margin-top: 50px;
+    margin-top: 0;
   }
 }
 
@@ -149,8 +151,8 @@ body {
   color: black;
   background-color: #f6e049;
   padding: 10px 90px;
-  margin-top: 5px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
   border: none;
   outline: none;
@@ -163,10 +165,15 @@ body {
 @media only screen and (min-width: 601px) {
   .benefits__icon {
     width: 50px;
-    margin: 0 1.5em 0 1.5em;
+    margin: 0 1.5em 0 2.5em;
+  }
+
+  .cta__button {
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 
   .cta__copy {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 }
