@@ -37,8 +37,34 @@
       </div>
     </div>
     <div class="cta">
-      <button class="cta__button">GET STELLAR</button>
+      <button class="cta__button" id="modal_button">GET STELLAR</button>
       <p class="cta__copy">Free on iOS + Android</p>
     </div>
+    <div class="modal" id="modal">
+      <div class="modal-container">
+        <button class="modal__closeBtn">&times;</button>
+        <img class="modal__image" src="images/modal-image.png" />
+        <form class="form" action="https://formspree.io/xvognkpn" method="POST">
+          <p class="form__headline">Hello! We're almost ready to set sail.</p>
+          <p class="form__copy">
+            But we have a few finishing touches to make on the app. If you would
+            like us to send you a reminder when we're ready, just add your email
+            below.
+          </p>
+          <div class="input-wrapper">
+            <label class="form__label"
+              >Email
+              <input
+                class="form__input"
+                type="text"
+                placeholder="you@example.com"
+              />
+            </label>
+            <button class="form__submitBtn">SUBMIT EMAIL</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
