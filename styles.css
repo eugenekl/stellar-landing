@@ -63,6 +63,7 @@ body {
   padding: 0.5em 0.5em 0em 0.5em;
   text-align: center;
   color: black;
+  font-style: italic;
 }
 
 .subheading {
@@ -120,7 +121,7 @@ body {
   font-family: "Oxygen", sans-serif;
   color: black;
   background-color: #f6e049;
-  padding: 10px 90px;
+  padding: 10px 18%;
   margin-top: 20px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -205,8 +206,15 @@ body {
   }
 
   .modal-container {
-    width: 30%;
+    width: 400px;
     padding: 10px 25px 25px 25px;
+  }
+
+  .hero-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
   }
 
   /* block */
@@ -220,8 +228,6 @@ body {
   }
 
   .hero {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
     padding: 25px 25px;
     width: 100%;
   }
@@ -271,6 +277,6 @@ body {
   }
 
   .form__input {
-    width: 220px;
+    width: 250px;
   }
 }
